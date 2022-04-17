@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -12,6 +13,7 @@ h1 {
 
 .music-container {
     width: auto;
+    max-width: 100%;
     background-color: rgb(238, 248, 248);
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgb(185, 198, 239);
@@ -19,6 +21,7 @@ h1 {
     margin: 50px 70% 90% 30px;
     display: flex;
     position: relative;
+    flex-direction: left;
 }
 
 .image-container {
