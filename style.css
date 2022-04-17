@@ -1,0 +1,90 @@
+body {
+    background-image: url('Images/Wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: rgb(254, 251, 251);
+    margin-left: 30px;
+}
+
+.music-container {
+    width: auto;
+    background-color: rgb(238, 248, 248);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(185, 198, 239);
+    padding: 10px 10px;
+    margin: 50px 70% 90% 30px;
+    display: flex;
+    position: relative;
+}
+
+.image-container {
+    width: 90px;
+    position: relative;
+}
+
+.image-container img {
+    width: inherit;
+    height: 90px;
+    border-radius: 50%;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-container.play .image-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: rgb(167, 229, 247);
+    border: 0;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.action-btn-big {
+    background-color: rgb(76, 205, 234);
+    font-size: 30px;
+    position: absolute;
+}
+
+.music-info {
+    position: absolute;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+    opacity: 0;
+}
+
+.music-info h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-style: italic;
+    color: aliceblue;
+}
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
